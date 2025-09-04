@@ -4,6 +4,8 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 export const userDataContext=createContext()
 
+export let socket=io("https://linkedin-backend-sfjs.onrender.com")
+
 function UserContext({children}) {
 let [userData,setUserData]=useState(null)
 let {serverUrl}=useContext(authDataContext)
